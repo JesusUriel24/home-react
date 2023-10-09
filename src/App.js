@@ -17,9 +17,6 @@ function App() {
     <div>
       <header className={`app-header ${menuVisible ? 'menu-open' : ''}`}>
         <div className="border-top"></div>
-        <div className="center-rectangle">
-          <button className="menu-button" onClick={toggleMenu}>☰</button>
-        </div>
         {menuVisible && (
           <nav className="dropdown-menu">
             <ul>
@@ -29,10 +26,14 @@ function App() {
             </ul>
           </nav>
         )}
+        <div className="center-rectangle">
+          <h1>Tu Aplicación</h1>
+          <button className="menu-button" onClick={toggleMenu}>☰</button>
+        </div>
       </header>
-      <main>
-        {/* Resto de tu contenido */}
-      </main>
+      <footer>
+        <p>Derechos de autor © {new Date().getFullYear()}</p>
+      </footer>
     </div>
   );
 }
